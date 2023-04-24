@@ -7,11 +7,13 @@ import { Statistics } from 'components/Statistics/Statistics';
 import friends from './FriendList/friends.json';
 import { FriendList } from 'components/FriendList/FriendList';
 
+import transactions from './TransactionHistory/transactions.json';
+import { TransactionHistory } from 'components/TransactionHistory/TransactionHistory';
+
 export const App = () => {
   return (
     <div
       style={{
-        height: '100vh',
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
@@ -27,6 +29,7 @@ export const App = () => {
       />
       <Statistics title="Upload stats" stats={data} />
       <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />
     </div>
   );
 };
